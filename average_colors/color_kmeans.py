@@ -1,8 +1,6 @@
 # import the necessary packages
 from sklearn.cluster import KMeans
-import matplotlib.pyplot as plt
 import argparse
-import utils
 import cv2
 
 def get_average_colors(img_array):
@@ -36,10 +34,6 @@ def get_dominant_color(image_path):
 	clt.fit(image)
 
 	dominant_color = clt.cluster_centers_[0]
-	# build a histogram of clusters and then create a figure
-	# representing the number of pixels labeled to each color
-	hist = utils.centroid_histogram(clt)
-	bar = utils.plot_colors(hist, clt.cluster_centers_)
 
 	# show our color bart
 	return (dominant_color, clt)

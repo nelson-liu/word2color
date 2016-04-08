@@ -9,7 +9,7 @@ import urllib2
 
 class BingScraper():
     def get_soup(self, url):
-        return BeautifulSoup(requests.get(url).text)
+        return BeautifulSoup(requests.get(url).text, "html.parser")
     # end def
 
     def download_images(self, color, num_images):
@@ -31,7 +31,7 @@ class BingScraper():
             image = cv2.imdecode(image, cv2.IMREAD_COLOR)
 
             x_size, y_size, _ = image.shape
-            cropped_image = image[0:y_size, x_size*.18:x_size*1.18]
+            cropped_image = image[0:y_size, int(x_size*.18):int(x_size*1.18)]
 
             cntr = len([i for i in os.listdir(download_directory)
                         if color in i]) + 1
