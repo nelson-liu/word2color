@@ -23,22 +23,16 @@ def get_colour_name(requested_colour):
     return actual_name, closest_name
 
 
-def main():
-    query = 'yellow'
-
-    # Fetch images and store in images/<query>
+def color_description_to_bin(color):
+    # Fetch images and store in images/<color>
     scraper = scrape_bing.BingScraper()
-    scraper.download_images(query, 3)
+    scraper.download_images(color, 3)
 
     # Get list of resulting images
-    images = map(lambda x: 'images/' + query + '/' + x, os.listdir('images/' + query))
+    images = map(lambda x: 'images/' + color + '/' + x, os.listdir('images/' + color))
 
     average_color = color_kmeans.get_average_colors(images)
     print average_color
 
     actual_name, closest_name = get_colour_name(tuple(average_color))
-
-    print "Actual colour name:", actual_name, ", closest colour name:", closest_name
-
-if __name__ == '__main__':
-    main()
+    return closest_name
