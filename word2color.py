@@ -1,12 +1,13 @@
 import os
+import shutil
+import webcolors
 
 from average_colors import color_kmeans
 from scrape_bing import scrape_bing
-import webcolors
 
 def closest_colour(requested_colour):
     min_colours = {}
-    for key, name in webcolors.css3_hex_to_names.items():
+    for key, name in webcolors.html4_hex_to_names.items():
         r_c, g_c, b_c = webcolors.hex_to_rgb(key)
         rd = (r_c - requested_colour[0]) ** 2
         gd = (g_c - requested_colour[1]) ** 2
@@ -32,7 +33,8 @@ def color_description_to_bin(color):
     images = map(lambda x: 'images/' + color + '/' + x, os.listdir('images/' + color))
 
     average_color = color_kmeans.get_average_colors(images)
-    print average_color
 
     actual_name, closest_name = get_colour_name(tuple(average_color))
+
+    shutil.rmtree('./images')
     return closest_name
