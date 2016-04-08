@@ -24,3 +24,5 @@ Pull requests are welcome!
 ## License
 
 Word2Color is licensed under the MIT License.
+
+Copyright (c) 2016-2016 Nelson Liu and Aakash Sethi
