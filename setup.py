@@ -27,12 +27,12 @@ setup(author='Nelson Liu, Aakash Sethi',
           'six==1.10.0',
           'traitlets==4.2.1',
           'webcolors==1.5'
-          ]
+          ],
       license='MIT',
       long_description='A tool for transforming natural language descriptions of colors to web-standard color names',
       name='word2color',
       packages=['word2color'],
       url='https://github.com/nelson-liu/word2color',
-      version='0.1',
+      version='0.1.1',
       zip_safe=False
 )
