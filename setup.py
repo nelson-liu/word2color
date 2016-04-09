@@ -1,9 +1,8 @@
 from setuptools import setup
 
 setup(author='Nelson Liu, Aakash Sethi',
-      author_email='nfliu@uw.edu, aakash@uw.edu',
+      author_email='nfliu@uw.edu, aakash.k.sethi@gmail.com',
       description='Convert descriptions of colors to colors',
-      install_requires=[],
       license='MIT',
       long_description='A tool for transforming natural language descriptions of colors to web-standard color names',
       name='word2color',
