@@ -8,6 +8,11 @@ Word2Color converts natural language color descriptions to
 ## Installation
 
 Word2Color is only tested on Python 2.7.X, although it likely works on Python 3 as well. OpenCV 2.4.X is a dependency, but is not listed in the requirements.txt to maintain compatability with virtual environments ([See: How to install OpenCV in virtualenv](http://stackoverflow.com/a/12043136/2544124)).
+To install with pip, run:  
+```bash
+pip install word2color
+```
+Note that after installng with pip, you should ensure you have all the requirements in the requirements.txt.
 
 ## Example Usage
 
