@@ -1,13 +1,11 @@
 appnope==0.1.0
 beautifulsoup4==4.4.1
-bs4==0.0.1
-cv2==1.0
+cv2==2.4.12
 cycler==0.10.0
 decorator==4.0.9
 gnureadline==6.3.3
 ipython==4.1.2
 ipython-genutils==0.1.0
-matplotlib==1.5.1
 numpy==1.11.0
 pathlib2==2.1.0
 pexpect==4.0.1
@@ -21,6 +19,5 @@ scikit-learn==0.17.1
 scipy==0.17.0
 simplegeneric==0.8.1
 six==1.10.0
-sklearn==0.0
 traitlets==4.2.1
 webcolors==1.5

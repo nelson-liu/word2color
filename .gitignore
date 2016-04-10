@@ -2,3 +2,6 @@ venv/*
 *~
 *.pyc
 images/*
+word2color.egg-info/*
+build/*
+dist/*
