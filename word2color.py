@@ -25,6 +25,8 @@ def get_colour_name(requested_colour):
 
 
 def color_description_to_bin(color):
+    color = color.replace('/', ' ')
+
     # Fetch images and store in images/<color>
     scraper = scrape_bing.BingScraper()
     scraper.download_images(color, 3)
@@ -36,5 +38,5 @@ def color_description_to_bin(color):
 
     actual_name, closest_name = get_colour_name(tuple(average_color))
 
-    shutil.rmtree('./images')
+    # shutil.rmtree('./images')
     return closest_name
