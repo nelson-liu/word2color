@@ -33,6 +33,6 @@ setup(author='Nelson Liu, Aakash Sethi',
       name='word2color',
       packages=['word2color'],
       url='https://github.com/nelson-liu/word2color',
-      version='0.1.1',
+      version='0.1.2',
       zip_safe=False
 )
