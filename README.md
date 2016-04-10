@@ -3,7 +3,7 @@
 ## About
 
 Word2Color converts natural language color descriptions to 
-[standard HTML4 colors](http://www.webstandards.org/learn/reference/charts/color_names/). This is especially useful in data science, where `color` attributes often do not follow any normal list -- this enables users to quickly add various colors to simplifying bins of HTML4 standard colors.
+[standard HTML4 colors](http://www.webstandards.org/learn/reference/charts/color_names/). This is especially useful in data science, where `color` attributes often do not follow any normal list -- this enables users to quickly add various colors to simplifying bins of HTML4 standard colors. It does this by an input query (say "blue cream"), scraping the first X results from bing images (X is a parameter you can specify) for your query, and using K-Means Clustering to find the dominant color in each image, which is then averaged with the other images scraped and converted to the closest HTML4 color.
 
 ## Installation
 
